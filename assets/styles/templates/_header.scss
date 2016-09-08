@@ -1,16 +1,14 @@
 header {
-    .bg-header {  position: absolute; z-index: -1; }
+    .bg-header {
+        @extend .fixed-element; z-index: -1;
+        background: url('../img/header-bg.png'); height: 560px; background-repeat: no-repeat; 
+        margin: 0 auto; width: 1500px;
+    }
     nav {
-        text-align: right; color: white; border-bottom: 1px solid #7c7c7c;
+        text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10;
+        /*@extend .fixed-element; */
         .logo { float: left; }
         ul, li { display: inline-block; }
         a { margin: 0 20px; line-height: 6; }
      }
 }
-
-main {
-    &.main-section { position: relative; top: 463px; background: white; height: 1200px; }
-    h2 { padding-top: 90px; padding-bottom: 60px; text-align: center; line-height: 1.5;
-        font-size: 18px; 
-    }
- }

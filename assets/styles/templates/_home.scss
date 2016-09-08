@@ -1,0 +1,27 @@
+main {
+    &.main-section { position: relative; top: 463px; background: white; height: 1200px; }
+    h2 { 
+        padding-top: 90px; padding-bottom: 95px; text-align: center; line-height: 1.5;
+        font-size: 18px; 
+    }
+ }
+
+.our-info{
+    .block-info { 
+        @include col(1/3); 
+        text-align: center; border: 1px solid #e1e1e1; border-radius: 5px; position: relative;
+
+        .block-info-img {
+            height: 129px; border-radius: 5px 5px 0 0;
+            &.block-info-img-one { background: url('../img/our-info-1.png') 0 -57px; }
+            &.block-info-img-two { background: url('../img/our-info-2.png') 0 -88px; } 
+            &.block-info-img-three { background: url('../img/our-info-3.png') 0 -32px; }
+        }
+
+        .circle { background: #71b6d5; border: 10px solid white; border-radius: 50px; width: 74px; height: 74px; position: absolute; top: -37px;
+                    left: 0; right: 0; margin: 0 auto;  }
+
+        h3 { text-transform: capitalize; margin-top: 30px; margin-bottom: 15px; }
+        p { margin-bottom: 30px; }
+    }
+}
