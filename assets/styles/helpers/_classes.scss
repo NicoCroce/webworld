@@ -13,6 +13,19 @@
 // -------------------------------------
 
 
+.line-settings { content: ''; border-bottom: 1px solid #e1e1e1; display: block; position: absolute; top: 13px; width: 46%; }
+
 .no-ml { margin-left: 0; }
 .no-mr { margin-right: 0; }
 .fixed-element { position: fixed; right: 0; left: 0; }
+
+.middle-line { 
+  text-align: center; margin: 70px 0 20px 0; font-size: 26px; position: relative; color: #71b6d5;
+  &:before { @extend .line-settings; left: 0; }
+  &:after { @extend .line-settings; right: 0; }
+ }
+
+ .title-section { 
+   text-align: center; font-size: 26px; text-transform: uppercase; 
+   span { font-weight: 600; }
+   }

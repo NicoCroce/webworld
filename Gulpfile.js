@@ -171,7 +171,7 @@ function copyIconsFunction(done) {
 		.pipe(gulp.dest(path.join(destFolder, 'css'))).on('error', gutil.log);
 
 	var copyFonts = gulp.src(SRC_FONTS_BASE + '/fonts/**/*')
-		.pipe(gulp.dest(path.join(destFolder, 'fonts'))).on('error', gutil.log);
+		.pipe(gulp.dest(path.join(destFolder, 'css/fonts/'))).on('error', gutil.log);
 	return merge(copyCss, copyFonts);
 };
 
