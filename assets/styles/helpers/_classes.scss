@@ -3,7 +3,7 @@
 
 	  CLASSES
 
-    -> Helper classes. Can be created by extending placeholders
+	-> Helper classes. Can be created by extending placeholders
 
 	=========================================
 */
@@ -13,19 +13,26 @@
 // -------------------------------------
 
 
-.line-settings { content: ''; border-bottom: 1px solid #e1e1e1; display: block; position: absolute; top: 13px; width: 46%; }
+.line-settings { content: ''; border-bottom: 1px solid #e1e1e1; display: block; position: absolute; top: 18px; width: 46%; }
 
 .no-ml { margin-left: 0; }
 .no-mr { margin-right: 0; }
 .fixed-element { position: fixed; right: 0; left: 0; }
 
 .middle-line { 
-  text-align: center; margin: 70px 0 20px 0; font-size: 26px; position: relative; color: #71b6d5;
+  text-align: center; margin: 70px 0 20px 0; font-size: 36px;; position: relative; color: $main-bg-color; line-height: 0;
   &:before { @extend .line-settings; left: 0; }
   &:after { @extend .line-settings; right: 0; }
  }
 
  .title-section { 
-   text-align: center; font-size: 26px; text-transform: uppercase; 
+   text-align: center; font-size: 26px; text-transform: uppercase; line-height: 1; margin-bottom: 50px;
    span { font-weight: 600; }
+   &.has-subtitle { margin-bottom: 8px; }
    }
+
+   .transparent-buton { padding: 10px 20px; border: 2px solid $main-bg-color; border-radius: 5px; background: transparent; 
+	  color: $main-bg-color; text-transform: uppercase; font-size: 14px; font-weight: 600;
+	}
+
+  .sub-title-section { text-align: center; font-size: 14px; }

@@ -31,7 +31,6 @@ $font-color-white: 		      #fff;
 //   Backgrounds
 // -------------------------------------
 $background:         		    white;
-$background-bright:			    $background;
 
 // -------------------------------------
 //   Wrappers
@@ -55,3 +54,6 @@ $wrapper-min-width: 				torem(1200px);
 // -------------------------------------
 $transition-duration:      0.25s;
 $transition-timing:        ease;
+
+
+$main-bg-color:     #71b6d5;

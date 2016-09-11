@@ -1,7 +1,7 @@
 header {
     .bg-header {
-        @extend .fixed-element; z-index: -1;
-        background: url('../img/header-bg.png'); height: 560px; background-repeat: no-repeat; 
+        @extend .fixed-element; z-index: -1; height: 1500px;
+        background: url('../img/header-bg.png'); background-repeat: no-repeat; 
         margin: 0 auto; width: 1500px;
     }
     nav {
