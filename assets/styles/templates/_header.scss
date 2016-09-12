@@ -1,13 +1,13 @@
 header {
     .bg-header {
-        @extend .fixed-element; z-index: -1; height: 1500px;
+        @extend .fixed-element; z-index: -1;     height: 1500px;
         background: url('../img/header-bg.png'); background-repeat: no-repeat; 
         margin: 0 auto; width: 1500px;
     }
     nav {
         text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10;
         /*@extend .fixed-element; */
-        .logo { float: left; }
+        .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
         ul, li { display: inline-block; }
         a { margin: 0 20px; line-height: 6; }
      }

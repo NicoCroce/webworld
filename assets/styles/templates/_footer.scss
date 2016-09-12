@@ -1,0 +1,39 @@
+footer {
+    p { line-height: 20px; }
+    overflow: auto; background: #273a43; padding: 60px 0;
+    section { 
+        @include col(1/4, $cycle: 4, $gutter: 5 ); 
+        h1 { font-size: 22px; color: #ffffff; font-weight: 600; margin-bottom: 30px; }
+        p { color: #c3c3c3; font-size: 14px; }
+        &.web {
+            h1 { font-size: 22px; font-family: 'Pacifico'; text-transform: capitalize; font-weight: 100; }
+        }
+        &.contact { 
+            .list-links li { 
+                margin-top: 20px;
+                i { color: $main-bg-color; font-size: 20px; width: 20px; display: inline-block; text-align: center; }
+                span { padding-left: 10px; color: white; }
+            }
+        }
+        &.latest-tweets {
+            .list-tweets {
+                display: table; margin-bottom: 35px;
+                i, p { display: table-cell; vertical-align: top; }
+                i { font-size: 20px; color: $main-bg-color; }
+                p { padding-left: 15px; }
+                span { display: block; margin-top: 10px; color: $main-bg-color; } 
+            }
+        }
+        &.news-latter {
+            form { 
+                display: table; margin-top: 15px; table-layout: fixed; border-radius: 5px; overflow: hidden;
+                input { display: table-cell; border: none; }
+                [type='text'] { padding: 10px; width: 80%; background: #172227; color: #a7a7a7; }
+                [type='submit'] { text-transform: uppercase; text-align: center; padding: 10px; background: $main-bg-color; color: white;
+                    width: 20%;
+                }
+                p { display: table-cell; }
+            }
+        }
+    }
+}

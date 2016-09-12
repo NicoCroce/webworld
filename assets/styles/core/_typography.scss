@@ -24,6 +24,8 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
+* { font-family: $font-family; }
+
 h1,
 h2,
 h3,
@@ -33,6 +35,7 @@ h6 {
   font: $font;
   font-weight: 400;
   color: $font-color;
+  font-family: $font-family;
 }
 
 h1 {

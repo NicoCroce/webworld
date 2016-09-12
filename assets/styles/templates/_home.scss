@@ -1,5 +1,6 @@
 main {
-    &.main-section { position: relative; top: 463px; background: white; }
+    overflow: auto;
+    &.main-section { background: white; }
     .first-par { 
         padding-top: 90px; padding-bottom: 65px; text-align: center; line-height: 1.5;
         font-size: 18px;
@@ -57,7 +58,7 @@ main {
 }
 
 .last-project-section {
-    margin-top: 40px; overflow: auto;
+    margin-top: 40px; text-align: center; overflow: hidden;
     .container-last-project {
         @include col(1/4);
         h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
@@ -73,7 +74,7 @@ main {
     }
 }
 
-.middle-line.commenting { margin-top: 84px; margin-bottom: 25px; }
+.middle-line.commenting { margin-top: 84px; margin-bottom: 25px; clear: both; }
 .testimonials-title { margin-bottom: 0; }
 .testimonials-slider {
     margin-bottom: 65px;
