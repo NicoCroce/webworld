@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'styleIcons';
-  src:  url('fonts/styleIcons.eot?e0jnpc');
-  src:  url('fonts/styleIcons.eot?e0jnpc#iefix') format('embedded-opentype'),
-    url('fonts/styleIcons.ttf?e0jnpc') format('truetype'),
-    url('fonts/styleIcons.woff?e0jnpc') format('woff'),
-    url('fonts/styleIcons.svg?e0jnpc#styleIcons') format('svg');
+  src:  url('fonts/styleIcons.eot?go99kg');
+  src:  url('fonts/styleIcons.eot?go99kg#iefix') format('embedded-opentype'),
+    url('fonts/styleIcons.ttf?go99kg') format('truetype'),
+    url('fonts/styleIcons.woff?go99kg') format('woff'),
+    url('fonts/styleIcons.svg?go99kg#styleIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
 .icon-camera:before {
   content: "\f030";
 }
