@@ -10,29 +10,41 @@ main {
 .our-info{
     padding-top: 35px; overflow: auto;
 
-    .block-info { 
-        @include col(1/3); 
-        text-align: center; border: 1px solid #e1e1e1; border-radius: 5px; position: relative; 
-
+    .block-info {
+        @include transition();
+        @include col(1/3); cursor: pointer;
+        text-align: center; border: 1px solid #e1e1e1; border-radius: 5px; position: relative;
+        box-shadow: 0 16px 0 white inset;
         .block-info-img {
-            height: 129px; border-radius: 5px 5px 0 0;
+            height: 129px; border-radius: 5px 5px 0 0; border: 0 solid white;
+            @include transition();
             &.block-info-img-one { background: url('../img/our-info-1.png') 0 -57px; }
             &.block-info-img-two { background: url('../img/our-info-2.png') 0 -88px; } 
             &.block-info-img-three { background: url('../img/our-info-3.png') 0 -32px; }
         }
+        &:hover {
+            box-shadow: 0 0 0 10px #71b6d5 inset;
+            .block-info-img { border: 10px solid $main-bg-color; border-bottom: 0; }
+            .circle { 
+                background: white; border: 10px solid $main-bg-color; 
+                [class*="icon"] { color: $main-bg-color; }
+            }
+        }
 
         .circle { 
             background: $main-bg-color; border: 10px solid white; border-radius: 50px; width: 74px; height: 74px; position: absolute; top: -37px;
-                    left: 0; right: 0; margin: 0 auto;  
+                    left: 0; right: 0; margin: 0 auto; z-index: 10; margin-top: 1px;
+                    @include transition();
                         [class*="icon"] { 
                             text-align: center; line-height: 2.5; color: white; font-size: 20px; position: relative;
                             right: 1px; top: 1px;
+                            @include transition();
                             &.change-ico { right: 0px; font-size: 22px; line-height: 2.4;}
-                            }
+                        }
                     }
 
-        h3 { text-transform: capitalize; margin-top: 30px; margin-bottom: 15px; }
-        p { margin-bottom: 30px; }
+        h3 { text-transform: capitalize; margin-top: 30px; margin-bottom: 15px; padding: 0 15px; }
+        p { margin-bottom: 30px; padding: 0 15px; }
     }
 }
 
@@ -58,14 +70,18 @@ main {
 }
 
 .last-project-section {
-    margin-top: 40px; text-align: center; overflow: hidden;
+    margin-top: 40px; text-align: center; overflow: hidden; cursor: pointer;
     .container-last-project {
+        transform: scale3d(1, 1, 1);
         @include col(1/4);
         h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
         h2 { font-size: 14px; }
+        &:hover {
+            [class*='last-project-'] { transform: scale3d(1.1, 1.1, 1.1); box-shadow: 0 0 0 20px #484848 inset;  }
+        }
     }
 
-    [class*='last-project-'] { height: 237px; }
+    [class*='last-project-'] { height: 237px; box-shadow: 0 0 0 0 black inset; @include transition(); }
 
     @for $i from 1 through 4 {
         .last-project-#{$i}-img {

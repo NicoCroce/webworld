@@ -74,5 +74,5 @@ button {
 
 a {
 	text-decoration: none;
-  transition: all $transition-duration $transition-timing;
+  @include transition();
 }

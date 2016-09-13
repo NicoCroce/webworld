@@ -20,6 +20,7 @@
 .no-ml { margin-left: 0; }
 .no-mr { margin-right: 0; }
 .fixed-element { position: fixed; right: 0; left: 0; }
+.mask-hidden { overflow: hidden; }
 
 .middle-line { 
   text-align: center; margin: 70px 0 20px 0; font-size: 36px;; position: relative; color: $main-bg-color; line-height: 0;
@@ -33,8 +34,11 @@
    &.has-subtitle { margin-bottom: 8px; }
    }
 
-   .transparent-buton { padding: 10px 20px; border: 2px solid $main-bg-color; border-radius: 5px; background: transparent; 
-	  color: $main-bg-color; text-transform: uppercase; font-size: 14px; font-weight: 600;
+   .transparent-buton { 
+      padding: 10px 20px; border: 2px solid $main-bg-color; border-radius: 5px; background: transparent; 
+	    color: $main-bg-color; text-transform: uppercase; font-size: 14px; font-weight: 600; cursor: pointer;
+      @include transition();
+      &:hover { background: $main-bg-color; color: white; }
 	}
 
   .sub-title-section { text-align: center; font-size: 14px; }
