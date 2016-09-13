@@ -72,19 +72,22 @@ main {
 .last-project-section {
     margin-top: 40px; text-align: center; overflow: hidden; cursor: pointer;
     .container-last-project {
-        transform: scale3d(1, 1, 1);
         @include col(1/4);
         h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
         h2 { font-size: 14px; }
         &:hover {
-            [class*='last-project-'] { transform: scale3d(1.1, 1.1, 1.1); box-shadow: 0 0 0 20px #484848 inset;  }
+            [class*='last-project-']:before { transform: scale3d(1.1, 1.1, 1.1); box-shadow: 0 0 0 20px #484848 inset;  }
         }
     }
 
-    [class*='last-project-'] { height: 237px; box-shadow: 0 0 0 0 black inset; @include transition(); }
+    [class*='last-project-'] { 
+        height: 237px;
+        @include mask-img();
+        &:before { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset; transform: scale3d(1, 1, 1); @include transition(); }
+    }
 
     @for $i from 1 through 4 {
-        .last-project-#{$i}-img {
+        .last-project-#{$i}-img:before {
             background: url('../img/last-project-#{$i}.jpg') 0 237px;
         }
     }

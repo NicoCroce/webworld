@@ -19,6 +19,11 @@
   transition: all #{$time}s #{$tFunction};
 }
 
+@mixin mask-img(){
+  overflow: hidden;
+  &:before { content: ''; display: block; height: 100%; width: 100%; }
+}
+
 @mixin debug-layout() {
 	* { outline: 2px dotted red; }
 	* * { outline: 2px dotted green; }
