@@ -24,6 +24,12 @@
   &:before { content: ''; display: block; height: 100%; width: 100%; }
 }
 
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @mixin debug-layout() {
 	* { outline: 2px dotted red; }
 	* * { outline: 2px dotted green; }

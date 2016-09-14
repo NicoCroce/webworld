@@ -3,11 +3,6 @@ header {
         @extend .fixed-element; z-index: -1;     height: 1500px;
         background: url('../img/header-bg.png'); background-repeat: no-repeat; 
         margin: 0 auto; width: 1500px;
-
-        /*para cuando supera al ancho*/
-           /* width: 100%;
-    background-size: contain;
-    background-position: 0 -147px;*/
     }
     nav {
         text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10;
@@ -15,5 +10,16 @@ header {
         .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
         ul, li { display: inline-block; }
         a { margin: 0 20px; line-height: 6; }
+     }
+     .header-slide {
+            position: relative; height: 390px;
+         i { color: white; font-size: 25px; width: 43px; position: relative; top: 50%; transform: perspective(1px) translateY(-50%); }
+
+        .change-info-slide { 
+            font-weight: bold; color: white; text-transform: inherit; text-align: center;
+            position: relative; top: 50%; transform: perspective(1px) translateY(-50%);
+            h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
+            h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; }
+        }
      }
 }

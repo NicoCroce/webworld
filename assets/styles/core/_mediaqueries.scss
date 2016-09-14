@@ -1,0 +1,13 @@
+/*'desktop-fhd': (max-width: 1920px),
+  'desktop': (max-width: 1366px),
+  'ipad': (min-width: 1023px, max-width: 1024px),
+  'isdesktop': (min-width: 1024px),
+  'ismobile': (max-width: 1024px),
+  'iphone': (max-width: 980px)*/
+
+  @media screen and (min-width: 1500px) {
+      /*para cuando supera al ancho*/
+      header .bg-header {
+            width: 100%; background-size: contain;
+      }
+  }
