@@ -13,11 +13,13 @@ header {
      }
      .header-slide {
             position: relative; height: 390px;
-         i { color: white; font-size: 25px; width: 43px; position: relative; top: 50%; transform: perspective(1px) translateY(-50%); }
-
+         i { 
+             display: table; height: 100%; color: white; font-size: 25px; position: absolute; top: 0; left: -50px;
+             &:before { display: table-cell; vertical-align: middle; }
+             &:last-of-type { right: -50px; left: inherit; }
+            } 
         .change-info-slide { 
-            font-weight: bold; color: white; text-transform: inherit; text-align: center;
-            position: relative; top: 50%; transform: perspective(1px) translateY(-50%);
+            font-weight: bold; color: white; text-transform: inherit; text-align: center; position: relative; top: 50%; transform: perspective(1px) translateY(-50%);
             h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
             h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; }
         }
