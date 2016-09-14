@@ -17,14 +17,21 @@ main {
         box-shadow: 0 16px 0 white inset;
         .block-info-img {
             height: 129px; border-radius: 5px 5px 0 0; border: 0 solid white;
+            @include mask-img();
             @include transition();
-            &.block-info-img-one { background: url('../img/our-info-1.png') 0 -57px; }
-            &.block-info-img-two { background: url('../img/our-info-2.png') 0 -88px; } 
-            &.block-info-img-three { background: url('../img/our-info-3.png') 0 -32px; }
+            &:after { border: 0 solid #71b6d5; border-bottom: 0; @include transition(); content: ''; display: block; height: 100%; width: 100%; position: absolute; top: 0;}
+            &:before { @include transition(); transform: scale3d(1, 1, 1); }
+            &.block-info-img-one:before { background: url('../img/our-info-1.png') 0 -57px; }
+            &.block-info-img-two:before { background: url('../img/our-info-2.png') 0 -88px; } 
+            &.block-info-img-three:before { background: url('../img/our-info-3.png') 0 -32px; }
         }
         &:hover {
             box-shadow: 0 0 0 10px #71b6d5 inset;
-            .block-info-img { border: 10px solid $main-bg-color; border-bottom: 0; }
+            .block-info-img {
+                &:after { border: 10px solid #71b6d5; border-bottom: 0; }
+                &:before { transform: scale3d(1.1, 1.1, 1.1) }
+            }
+            
             .circle { 
                 background: white; border: 10px solid $main-bg-color; 
                 [class*="icon"] { color: $main-bg-color; }
