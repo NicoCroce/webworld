@@ -25,6 +25,7 @@ header {
         .change-info-slide { 
             height: 100%;
             font-weight: bold; color: white; text-transform: inherit; text-align: center; position: relative;
+            .mask-container { height: 100%; }
             .vertical-center-content { 
                 @include vertical-align();
                 h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }

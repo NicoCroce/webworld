@@ -5,9 +5,17 @@
   'ismobile': (max-width: 1024px),
   'iphone': (max-width: 980px)*/
 
+$ismobile: 1024px;
+
   @media screen and (min-width: 1500px) {
       /*para cuando supera al ancho*/
       header .bg-header {
             width: 100%; background-size: contain;
       }
+  }
+
+  @media screen and (max-width: $ismobile) {
+    .last-project-section .container-last-project {
+        @include col(2/4);
+    }
   }
