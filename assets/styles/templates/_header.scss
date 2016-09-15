@@ -1,4 +1,6 @@
 header {
+        position: fixed;
+    width: 100%;
     .bg-header {
         @extend .fixed-element; z-index: -1;     height: 1500px;
         background: url('../img/header-bg.png'); background-repeat: no-repeat; 
@@ -13,15 +15,41 @@ header {
      }
      .header-slide {
             position: relative; height: 390px;
-         i { 
-             display: table; height: 100%; color: white; font-size: 25px; position: absolute; top: 0; left: -50px;
-             &:before { display: table-cell; vertical-align: middle; }
-             &:last-of-type { right: -50px; left: inherit; }
-            } 
+        i {    
+            transform: scale3d(1 ,1 ,1); @include transition(); cursor: pointer;
+            color: white; font-size: 40px; position: absolute; left: -50px; top: 44%;
+
+            &:last-of-type { right: -50px; left: inherit; }
+            &:hover { transform: scale3d(1.1 ,1.1 ,1.1); color: #71b6d5; }
+        } 
         .change-info-slide { 
-            font-weight: bold; color: white; text-transform: inherit; text-align: center; position: relative; top: 50%; transform: perspective(1px) translateY(-50%);
-            h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
-            h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; }
+            height: 100%;
+            font-weight: bold; color: white; text-transform: inherit; text-align: center; position: relative;
+            .vertical-center-content { 
+                @include vertical-align();
+                h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
+                h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; }
+            }
+            .button-show-more { 
+                @include h-al-center(); bottom: 0;
+                @include transition();
+                padding: 15px 20px; font-size: 17px; text-transform: uppercase; color: white; background: #71b6d5;
+                border: none; border-radius: 5px; font-weight: 600; cursor: pointer; line-height: 1; 
+                &:hover { background: rgba(113, 182, 213, 0.61); box-shadow: 0 0 0 3px #71b6d5 inset; }
+            }
+        }
+        .points-slide {
+            text-align: center; margin-top: 40px;
+           li { 
+                width: 7px; height: 7px; background: white; border-radius: 10px; display: inline-block; margin-left: 30px; cursor: pointer;
+                &:first-of-type { margin: 0; }
+                &.active {
+                    cursor: default;
+                    &:before {
+                        content: ''; border: 2px solid white; display: block; width: 25px; height: 25px; border-radius: 50%; position: relative; top: -9px; left: -9px;
+                    }
+               }
+            } 
         }
      }
 }
