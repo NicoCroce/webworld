@@ -16,6 +16,7 @@ $ismobile: 1024px;
 
   @media screen and (max-width: $ismobile) {
     .last-project-section .container-last-project {
-        @include col(2/4);
+        /*@include span(1/2);
+        .last-content-project { margin: 0 auto; }*/
     }
   }
