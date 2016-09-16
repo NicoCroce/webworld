@@ -14,10 +14,10 @@ header {
         a { margin: 0 20px; line-height: 6; }
      }
      .header-slide {
-            position: relative; height: 390px;
+            position: relative; height: 365px;
         i {    
             transform: scale3d(1 ,1 ,1); @include transition(); cursor: pointer;
-            color: white; font-size: 40px; position: absolute; left: -50px; top: 44%;
+            color: white; font-size: 40px; position: absolute; left: -50px; top: 45%;
 
             &:last-of-type { right: -50px; left: inherit; }
             &:hover { transform: scale3d(1.1 ,1.1 ,1.1); color: #71b6d5; }
@@ -29,7 +29,7 @@ header {
             .vertical-center-content { 
                 @include vertical-align();
                 h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
-                h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; }
+                h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; line-height: 1; }
             }
             .button-show-more { 
                 @include h-al-center(); bottom: 0;
