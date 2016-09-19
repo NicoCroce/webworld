@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "~3.1.0",
-    "jeet": "=6.1.2",
+    "jeet": "https://github.com/mojotech/jeet.git#~6.1.4",
     "normalize-scss": "normalize.scss#^5.0.3"
   },
   "ignore": [

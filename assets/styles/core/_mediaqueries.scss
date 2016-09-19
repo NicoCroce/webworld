@@ -7,16 +7,20 @@
 
 $ismobile: 1024px;
 
-  @media screen and (min-width: 1500px) {
+  @media (min-width: 1500px) {
       /*para cuando supera al ancho*/
       header .bg-header {
-            width: 100%; background-size: contain;
+        width: 100%; background-size: contain;
       }
   }
 
-  @media screen and (max-width: $ismobile) {
-    .last-project-section .container-last-project {
-        /*@include span(1/2);
-        .last-content-project { margin: 0 auto; }*/
+  @media (max-width: $ismobile) {
+    .wrapper, wrapper { padding: 0 20px; }
+    .last-project-section {
+     /* @include center(80%);*/
+      .container-last-project {
+        @include span(1/2);
+        .content-block-slide { margin: 0 auto; }
+      }
     }
   }

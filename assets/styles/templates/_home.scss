@@ -77,17 +77,16 @@ main {
 }
 
 .last-project-section {
+    /*@include center();*/
     margin-top: 40px; text-align: center; overflow: hidden; cursor: pointer;
     .container-last-project {
-        @include col(1/4, $cycle: 4, $uncycle: 2);
-        .last-content-project { 
-            max-width: 237px;
+        @include col(1/4);
             h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
             h2 { font-size: 14px; }
             &:hover {
                 [class*='last-project-']:before { transform: scale3d(1.1, 1.1, 1.1); box-shadow: 0 0 0 20px #484848 inset;  }
             }
-        }
+            .content-block-slide { max-width: 237px; }
     }
 
     [class*='last-project-'] { 
