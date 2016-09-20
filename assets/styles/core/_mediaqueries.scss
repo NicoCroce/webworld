@@ -36,6 +36,15 @@ $isPhone: 640px;
 }
 
 @media (max-width: $isPhone) {
+
+  header {
+    nav {
+      background: #273a43; border: none;
+      &.wrapper { padding: 13px 25px; overflow: auto; }
+      .logo { line-height: 1; float: right; margin: 0; }
+      ul { display: none; }
+    } 
+  }
     .our-info .block-info { 
       max-width: 324px; width: 100%; margin: 0 auto; margin-bottom: 50px; float: none; 
       &:last-child { margin: 0 auto; }
@@ -62,10 +71,49 @@ $isPhone: 640px;
         display: block; float: none; width: 100%; text-align: center; float: none; padding: 0;
         p { display: none; }
         &.web h1 { margin-bottom: 40px; line-height: 1; }
-        &.contact h1 { display: none; }
+        &.contact {
+          h1 { display: none; }
+          .list-links {
+            display: table; width: 100%;
+            li { 
+              display: table-cell; font-size: 14px; 
+              i { position: relative; top: 3px; }
+            }
+          }
+        }
+        &.latest-tweets { display: none; }
+        &.news-latter { 
+          margin-top: 40px; table-layout: fixed;
+          h1, p, form { display: table-cell; vertical-align: middle; }
+          h1 { font-size: 20px; }
+          p { font-size: 13px; width: 35%; text-align: left; padding: 0 22px; }
+          form {
+            input { float: left; }
+            [type='text'] { border-radius: 5px 0 0 5px; }
+            [type='submit'] { border-radius: 0 5px 5px 0; }
+          }
+        }
+      }
+
+      @media (max-width: 510px) {          
+        section {
+          &.contact .list-links {
+            display: block;
+            li { 
+              i { width: 100%; }
+              &:first-of-type { margin: 0; }
+              width: 100%; display: block; 
+            }
+          }
+          &.news-latter {
+            h1, p, form { display: block; }
+            h1 { float: left; width: 30%; }
+            p { float: right; width: 70%;}
+            form { clear: both; margin-top: 5px;}
+          }
+        }
       }
         
-
     }
 
 }
