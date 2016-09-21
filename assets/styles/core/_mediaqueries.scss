@@ -9,111 +9,137 @@ $ismobile: 1024px;
 $isPhone: 640px;
 
 @media (min-width: 1500px) {
-  /*para cuando supera al ancho*/
-  header .bg-header {
-    width: 100%; background-size: contain;
-  }
+	/*para cuando supera al ancho*/
+  	header .bg-header {
+		width: 100%; background-size: contain;
+  	}
 }
 
 @media (max-width: $ismobile) {
-  .wrapper, wrapper { padding: 0 20px; }
-  .last-project-section {
-    /* @include center(80%);*/
-    .container-last-project {
-      @include span(1/2);
-      &:nth-child(3) .content-block-slide { margin-bottom: 0; }
-      &:nth-child(4) .content-block-slide { margin-bottom: 0; }
-      .content-block-slide { 
-        margin: 0 auto; margin-bottom: 40px;
-      }
-    }
-  }
-  footer .grid-nav section {
-    @include col(1/2, $cycle: 2, $gutter: 5 );
-    padding-bottom: 40px;
-    &:nth-child(3), &:nth-child(4) { padding-bottom: 0; }
-  }
+  	.wrapper, wrapper { padding: 0 25px; }
+  	.last-project-section {
+		/* @include center(80%);*/
+		.container-last-project {
+	  	@include span(1/2);
+	  	&:nth-child(3) .content-block-slide { margin-bottom: 0; }
+	  	&:nth-child(4) .content-block-slide { margin-bottom: 0; }   
+	  	.content-block-slide { 
+			margin: 0 auto; margin-bottom: 40px;
+	  	}
+		}
+  	}
+  	footer .grid-nav section {
+		@include col(1/2, $cycle: 2, $gutter: 5 );
+		padding-bottom: 40px;
+		&:nth-child(3), &:nth-child(4) { padding-bottom: 0; }
+  	}
 }
 
 @media (max-width: $isPhone) {
+	nav {
+		background: #273a43; border: none; position: fixed; width: 100%; z-index: 100;
+		&.wrapper { padding: 13px 25px; overflow: auto; }
+		.logo { line-height: 1; float: right; margin: 0; }
+		ul { display: none; }
+	}
+	header {
+		top: 56px;
+		.bg-header { background-size: cover; width: 100%; top: 56px; height: 237px; }
+		
+		.header-slide {
+			height: 237px;
+			.change-info-slide {
+				width: 85%; margin: 0 auto;
+				.mask-container { 
+					@include vertical-align();
+					height: auto;
+					.vertical-center-content {
+						position: initial; top: 0; transform: none;
+						h1 { font-size: 27px; margin-bottom: 10px; font-weight: 100; }
+						h2 { font-size: 16px; }
+					}
+					button { position: initial; left: initial; right: initial; transform: none; margin-top: 35px; }
+				}
+			}
+				
+	  		.points-slide { display: none; }
+			i { 
+				left: 25px; font-size: 25px;
+				&:last-of-type { right: 25px; }
+			}
+		}	
+	}
 
-  header {
-    nav {
-      background: #273a43; border: none;
-      &.wrapper { padding: 13px 25px; overflow: auto; }
-      .logo { line-height: 1; float: right; margin: 0; }
-      ul { display: none; }
-    } 
-  }
-    .our-info .block-info { 
-      max-width: 324px; width: 100%; margin: 0 auto; margin-bottom: 50px; float: none; 
-      &:last-child { margin: 0 auto; }
-    }
+	.main-section.scrollable { top: 297px; }
 
-    .devices-section, .cameras-section {
-        div {
-          &.block-info-section { display: block; margin: 0 auto; padding: 0; }
-          &.img-cameras, &.img-devices { display: none;
-          }
-        }
-    }
-    .last-project-section .container-last-project {
-      @include span(1/1);
-      .content-block-slide { 
-        margin: 0 auto; margin-bottom: 40px;
-      }
-      &:nth-child(3) .content-block-slide { margin-bottom: 40px; }
-      &:nth-child(4) .content-block-slide { margin-bottom: 0; }
-    }
-    footer .grid-nav {
-      padding-top: 40px;
-      section {
-        display: block; float: none; width: 100%; text-align: center; float: none; padding: 0;
-        p { display: none; }
-        &.web h1 { margin-bottom: 40px; line-height: 1; }
-        &.contact {
-          h1 { display: none; }
-          .list-links {
-            display: table; width: 100%;
-            li { 
-              display: table-cell; font-size: 14px; 
-              i { position: relative; top: 3px; }
-            }
-          }
-        }
-        &.latest-tweets { display: none; }
-        &.news-latter { 
-          margin-top: 40px; table-layout: fixed;
-          h1, p, form { display: table-cell; vertical-align: middle; }
-          h1 { font-size: 20px; }
-          p { font-size: 13px; width: 35%; text-align: left; padding: 0 22px; }
-          form {
-            input { float: left; }
-            [type='text'] { border-radius: 5px 0 0 5px; }
-            [type='submit'] { border-radius: 0 5px 5px 0; }
-          }
-        }
-      }
 
-      @media (max-width: 510px) {          
-        section {
-          &.contact .list-links {
-            display: block;
-            li { 
-              i { width: 100%; }
-              &:first-of-type { margin: 0; }
-              width: 100%; display: block; 
-            }
-          }
-          &.news-latter {
-            h1, p, form { display: block; }
-            h1 { float: left; width: 30%; }
-            p { float: right; width: 70%;}
-            form { clear: both; margin-top: 5px;}
-          }
-        }
-      }
-        
-    }
+  
+	.our-info .block-info { 
+	  	max-width: 324px; width: 100%; margin: 0 auto; margin-bottom: 50px; float: none; 
+	  	&:last-child { margin: 0 auto; }
+	}
 
+	.devices-section, .cameras-section {
+		div {
+		  	&.block-info-section { display: block; margin: 0 auto; padding: 0; }
+		  	&.img-cameras, &.img-devices { display: none; }
+		}
+	}
+	.last-project-section .container-last-project {
+	  	@include span(1/1);
+	  	.content-block-slide { 
+			margin: 0 auto; margin-bottom: 40px;
+	  	}
+	  	&:nth-child(3) .content-block-slide { margin-bottom: 40px; }
+	  	&:nth-child(4) .content-block-slide { margin-bottom: 0; }
+	}
+	footer .grid-nav {
+	  	padding-top: 40px;
+	  	section {
+			display: block; float: none; width: 100%; text-align: center; float: none; padding: 0;
+			p { display: none; }
+			&.web h1 { margin-bottom: 40px; line-height: 1; }
+			&.contact {
+		  		h1 { display: none; }
+		  		.list-links {
+					display: table; width: 100%;
+					li { 
+			  			display: table-cell; font-size: 14px; 
+			  			i { position: relative; top: 3px; }
+					}
+		  		}
+			}
+			&.latest-tweets { display: none; }
+			&.news-latter { 
+		  		margin-top: 40px; table-layout: fixed;
+				h1, p, form { display: table-cell; vertical-align: middle; }
+				h1 { font-size: 20px; }
+				p { font-size: 13px; width: 35%; text-align: left; padding: 0 22px; }
+				form {
+					input { float: left; }
+					[type='text'] { border-radius: 5px 0 0 5px; }
+					[type='submit'] { border-radius: 0 5px 5px 0; }
+				}
+			}
+	  	}
+
+	  	@media (max-width: 510px) {          
+			section {
+		  		&.contact .list-links {
+					display: block;
+					li { 
+						i { width: 100%; }
+						&:first-of-type { margin: 0; }
+						width: 100%; display: block; 
+					}
+		  		}
+		  		&.news-latter {
+					h1, p, form { display: block; }
+					h1 { float: left; width: 30%; }
+					p { float: right; width: 70%;}
+					form { clear: both; margin-top: 5px;}
+				}
+			}
+	  	}
+	}
 }

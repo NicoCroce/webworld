@@ -1,3 +1,12 @@
+
+nav {
+    text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10; position: fixed;
+    width: 100%; margin: 0 auto; left: 0; right: 0;
+    /*@extend .fixed-element; */
+    .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
+    ul, li { display: inline-block; }
+    a { margin: 0 20px; line-height: 6; }
+}
 header {
         position: fixed;
     width: 100%;
@@ -6,15 +15,8 @@ header {
         background: url('../img/header-bg.png'); background-repeat: no-repeat; 
         margin: 0 auto; width: 1500px;
     }
-    nav {
-        text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10;
-        /*@extend .fixed-element; */
-        .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
-        ul, li { display: inline-block; }
-        a { margin: 0 20px; line-height: 6; }
-     }
      .header-slide {
-            position: relative; height: 365px;
+            position: relative; height: 365px; top: 97px;
         i {    
             transform: scale3d(1 ,1 ,1); @include transition(); cursor: pointer;
             color: white; font-size: 40px; position: absolute; left: -50px; top: 45%;

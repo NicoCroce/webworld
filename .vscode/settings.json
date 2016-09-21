@@ -1,0 +1,16 @@
+// Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
+{
+    "css.lint": true,
+    "scss.lint": true,
+    "css.lint.duplicateProperties": "warning",
+    "scss.lint.compatibleVendorPrefixes": "warning",
+    "scss.lint.importStatement": "warning",
+    "extensions.autoUpdate": true,
+    // Controla el guardado automático de los archivos modificados. Valores aceptados: "off", "afterDelay", "onFocusChange" (el editor pierde el foco), "onWindowChange" (la ventana pierde el foco) . Si se establece en "afterDelay", puede configurar el retraso en "files.autoSaveDelay".
+    "files.autoSave": "afterDelay",
+
+    // Controla el retraso en MS tras el cual un archivo con modificaciones se guarda automáticamente. Solo se aplica si "files.autoSave" está establecido en "afterDelay".
+    "files.autoSaveDelay": 1000,
+    "editor.formatOnType": true,
+
+}
