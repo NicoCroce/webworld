@@ -19,19 +19,19 @@ $isPhone: 640px;
   	.wrapper, wrapper { padding: 0 25px; }
   	.last-project-section {
 		/* @include center(80%);*/
-		.container-last-project {
-	  	@include span(1/2);
-	  	&:nth-child(3) .content-block-slide { margin-bottom: 0; }
-	  	&:nth-child(4) .content-block-slide { margin-bottom: 0; }   
-	  	.content-block-slide { 
-			margin: 0 auto; margin-bottom: 40px;
-	  	}
-		}
+      .container-last-project {
+        @include span(1/2);
+        &:nth-child(3) .content-block-slide { margin-bottom: 0; }
+        &:nth-child(4) .content-block-slide { margin-bottom: 0; }   
+        .content-block-slide { 
+          margin: 0 auto; margin-bottom: 40px;
+        }
+      }
   	}
   	footer .grid-nav section {
-		@include col(1/2, $cycle: 2, $gutter: 5 );
-		padding-bottom: 40px;
-		&:nth-child(3), &:nth-child(4) { padding-bottom: 0; }
+      @include col(1/2, $cycle: 2, $gutter: 5 );
+      padding-bottom: 40px;
+      &:nth-child(3), &:nth-child(4) { padding-bottom: 0; }
   	}
 }
 
@@ -39,7 +39,7 @@ $isPhone: 640px;
 	nav {
 		background: #273a43; border: none; position: fixed; width: 100%; z-index: 100;
 		&.wrapper { padding: 13px 25px; overflow: auto; }
-		.logo { line-height: 1; float: right; margin: 0; }
+		.logo { line-height: 1; float: right; margin: 0; padding: 13px 0; }
 		ul { display: none; }
 	}
 	header {
@@ -47,7 +47,7 @@ $isPhone: 640px;
 		.bg-header { background-size: cover; width: 100%; top: 56px; height: 237px; }
 		
 		.header-slide {
-			height: 237px;
+			height: 237px; top: 0;
 			.change-info-slide {
 				width: 85%; margin: 0 auto;
 				.mask-container { 

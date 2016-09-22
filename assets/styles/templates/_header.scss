@@ -1,8 +1,7 @@
 
 nav {
-    text-align: right; color: white; border-bottom: 1px solid #7c7c7c; z-index: 10; position: fixed;
-    width: 100%; margin: 0 auto; left: 0; right: 0;
-    /*@extend .fixed-element; */
+    text-align: right; color: white;  z-index: 10; position: fixed; left: 0; right: 0; background: rgba(0,0,0,.5);
+    .content-header { border-bottom: 1px solid #7c7c7c; }
     .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
     ul, li { display: inline-block; }
     a { margin: 0 20px; line-height: 6; }
