@@ -10,19 +10,41 @@ $isPhone: 640px;
 
 @media (min-width: 1500px) {
 	/*para cuando supera al ancho*/
-  	header .bg-header {
-		width: 100%; background-size: contain;
-  	}
+  	header {
+		.bg-header { width: 100%; background-size: contain; }
+		/*.header-slide {
+		height: 237px; top: 0;
+		.change-info-slide {
+			width: 85%; margin: 0 auto;
+			.mask-container { 
+				@include vertical-align();
+				height: auto;
+				.vertical-center-content {
+					position: initial; top: 0; transform: none;
+					h1 { font-size: 27px; margin-bottom: 10px; font-weight: 100; }
+					h2 { font-size: 16px; }
+				}
+				button { position: initial; left: initial; right: initial; transform: none; margin-top: 35px; }
+			}
+		}*/
+			
+		/*.points-slide { display: none; }*/
+		i { 
+			left: 25px; font-size: 25px;
+			&:last-of-type { right: 25px; }
+		}
+	}
 }
 
 @media (max-width: $ismobile) {
+	header .header-slide { width: 82%; }
   	.wrapper, wrapper { padding: 0 25px; }
   	.last-project-section {
 		/* @include center(80%);*/
       .container-last-project {
         @include span(1/2);
-        &:nth-child(3) .content-block-slide { margin-bottom: 0; }
-        &:nth-child(4) .content-block-slide { margin-bottom: 0; }   
+        &:nth-child(4) .content-block-slide { margin-bottom: 0; }
+        &:nth-child(5) .content-block-slide { margin-bottom: 0; }   
         .content-block-slide { 
           margin: 0 auto; margin-bottom: 40px;
         }
@@ -45,14 +67,15 @@ $isPhone: 640px;
 		background: #273a43; border: none; position: fixed; width: 100%; z-index: 100;
 		&.wrapper { padding: 13px 25px; overflow: auto; }
 		.logo { line-height: 1; float: right; margin: 0; padding: 13px 0; }
-		ul { display: none; }
+		ul.menu-desktop { display: none; }
+		.bt-menu { display: block; }
 	}
 	header {
 		top: 56px;
 		.bg-header { background-size: cover; width: 100%; top: 56px; height: 237px; }
 		
 		.header-slide {
-			height: 237px; top: 0;
+			height: 237px; top: 0; width: 100%;
 			.change-info-slide {
 				width: 85%; margin: 0 auto;
 				.mask-container { 
@@ -77,6 +100,21 @@ $isPhone: 640px;
 
 	.main-section.scrollable { top: 297px; }
 
+	section.our-info { margin-bottom: 20px; }
+
+	.all-content { 
+		overflow: hidden; max-height: 0; transition: all .3s ease-out; opacity: 0;
+		&.is-visible { max-height: 675px; opacity: 1; }
+	}
+
+	.middle-line {
+		margin: 0; position: relative; z-index: 1; font-size: 28px;
+		[class^="icon-"] {  border-radius: 50%; background: white; height: 40px; width: 42px; display: block; margin: 0 auto; line-height: 1.4; }
+	}
+
+	.title-section { background: #71b6d5; padding-top: 30px; padding-bottom: 10px; position: relative; top: -22px;
+    	z-index: 0; margin-bottom: 0; }
+
 
   
 	.our-info .block-info { 
@@ -90,13 +128,23 @@ $isPhone: 640px;
 		  	&.img-cameras, &.img-devices { display: none; }
 		}
 	}
-	.last-project-section .container-last-project {
-	  	@include span(1/1);
-	  	.content-block-slide { 
-			margin: 0 auto; margin-bottom: 40px;
-	  	}
-	  	&:nth-child(3) .content-block-slide { margin-bottom: 40px; }
-	  	&:nth-child(4) .content-block-slide { margin-bottom: 0; }
+	.last-project-section {
+		overflow: hidden; max-height: 0; transition: all .3s ease-out; opacity: 0;
+		&.is-visible { max-height: 1600px; opacity: 1; }
+		.container-last-project {
+			@include span(1/1);
+			.content-block-slide { 
+				margin: 0 auto; margin-bottom: 40px;
+			}
+			&:nth-child(4) .content-block-slide { margin-bottom: 40px; }
+			&:nth-child(5) .content-block-slide { margin-bottom: 0; }
+		}
+	}
+	.middle-line.commenting { margin: 0; }
+	.testimonials-slider {
+		overflow: hidden;  max-height: 0px; opacity: 0; transition: all .3s ease-out; 
+		&.is-visible { opacity: 1; max-height: 350px; }
+		.testimonials-subpar { padding: 0; }
 	}
 	footer .grid-nav {
 	  	padding-top: 40px;
@@ -131,11 +179,12 @@ $isPhone: 640px;
 	
 
 /*---------------------------------------------------------------------------------------------------------------------------------------*/
+}
 
 
-
-
-	@media (max-width: 510px) {          
+@media (max-width: 510px) {          
+	footer {
+		.grid-nav {
 			section {
 		  		&.contact .list-links {
 					display: block;
@@ -151,6 +200,10 @@ $isPhone: 640px;
 					p { float: right; width: 70%;}
 					form { clear: both; margin-top: 5px;}
 				}
-			}
-	  	}
+			}	
+		}
+		.social-links .wrapper ul {
+			margin-top: 20px;
+		}
+	} 
 }

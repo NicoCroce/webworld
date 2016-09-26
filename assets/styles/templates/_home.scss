@@ -77,8 +77,8 @@ main {
 }
 
 .last-project-section {
-    /*@include center();*/
-    margin-top: 40px; text-align: center; overflow: hidden; cursor: pointer;
+    text-align: center; overflow: hidden; cursor: pointer;
+    .sub-title-section { margin-bottom: 40px; }
     .container-last-project {
         @include col(1/4);
             h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }

@@ -3,16 +3,30 @@ $(document).ready(function () {
     $('#changeSection').load('./partials/home.html');
 
     $('#btMenu').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $('html').removeClass('no-scroll');
-            $('#menuMobile').addClass('hidden');
-            $('#bgPage').removeClass('visible');
-        }else{
-            $(this).addClass("active");
-            $('html').addClass('no-scroll');
-            $('#menuMobile').removeClass('hidden');
-            $('#bgPage').addClass('visible');
-        }   
+            $(this).toggleClass('active');
+            $('html').toggleClass('no-scroll');
+            $('#menuMobile').toggleClass('hidden');
+            $('#bgPage').toggleClass('visible');
     });
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if (scroll > 460){
+            $('#navigation-bar').addClass('nav-stacked');
+        } else {
+            $('#navigation-bar').removeClass('nav-stacked');
+        }
+    });
+
+    $(document).on("click", '#ourFeatures ', function() {
+        $('#ourFeaturesContent').toggleClass('is-visible');
+    });
+
+    $(document).on('click', '#latestProjects', function() {
+        $('#lastProjectSection').toggleClass('is-visible');
+    });
+
+    $(document).on('click', '#clientTestimonials', function() {
+        $('#sectionClientTestimonials').toggleClass('is-visible');
+    })
 });

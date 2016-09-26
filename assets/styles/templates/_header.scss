@@ -1,13 +1,14 @@
 
 nav {
-    text-align: right; color: white;  z-index: 100; position: fixed; left: 0; right: 0; background: rgba(0,0,0,.5);
+    text-align: right; color: white;  z-index: 100; position: fixed; left: 0; right: 0;
     .content-header { border-bottom: 1px solid #7c7c7c; }
     .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
+    &.nav-stacked { background: rgba(0,0,0,.5); }
     ul, li { display: inline-block; }
-    a { margin: 0 20px; line-height: 6; }
+    .menu-desktop a { margin: 0 20px; line-height: 6; }
 
     .menu-mobile {
-        height: 200%; position: fixed; z-index: 10; width: 70%; background: rgb(24, 24, 26);
+        height: 200%; position: fixed; z-index: 10; width: 70%; background: rgba(24,24,26,0.90);
         transition: all .4s ease;
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -18,19 +19,49 @@ nav {
     }
 
     .bt-menu { 
-        width: 25px; cursor: pointer; z-index: 101; position: absolute; top: 10px; left: 10px;
-        transition: all .3s ease;
+        width: 25px; cursor: pointer; z-index: 101; position: absolute; top: 20px; left: 25px;
+        transition: all .3s ease; display: none;
         div	{
             transition: all .3s ease;
-            height: 2px; background: red; margin-bottom: 5px;
+            height: 2px; background: white; margin-bottom: 5px;
             &:last-child { margin: 0; }
         }
         &.active { 
             transform: rotate3d(0, 0, 1, 180deg);
             div {
-                background: red;
+                background: $main-bg-color;
                 &:nth-child(1){ transform: rotate3d(0, 0, 1, 31deg) translate3d(0, 3px, 0); margin-left: 10px; width: 18px; }
                 &:nth-child(3){ transform: rotate3d(0, 0, 1, -31deg) translate3d(0, -3px, 0); margin-left: 10px; width: 18px; }
+            }
+        }
+    }
+    .nav-bar-menu { 
+        list-style-type:none; width: 100%; text-align: center; text-transform: uppercase;
+        margin-top: 20%;
+        li {
+            display: block; 
+            a {
+                display:block; color:#EAEAEA; padding: 15px 20px; position:relative; box-shadow: 0px -10px 7px -7px rgba(253, 202, 46, 0) inset;
+                transition: all .3s ease-in .1s;
+                &:before {
+                    transition: all .3s ease-in;
+                    content:""; display:block; position:absolute; left:50%; bottom:0; 
+                    height:2px; width:0; background: $main-bg-color;
+                }
+
+                &:hover {
+                    color: $main-bg-color; box-shadow: 0px -10px 7px -7px $main-bg-color  inset;
+                    &:before {
+                        width:100%; left:0; color: $main-bg-color
+                    }
+                }
+
+                &.active {
+                    color: $main-bg-color; font-weight: 600; box-shadow: 0px -10px 7px -7px $main-bg-color inset;
+                    &:before {
+                        width:100%; left:0; color: $main-bg-color
+                    }
+                } 
             }
         }
     }

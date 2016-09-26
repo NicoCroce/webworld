@@ -16,6 +16,7 @@
 .scrollable { position: relative; top: 560px; }
 
 .line-settings { content: ''; border-bottom: 1px solid #e1e1e1; display: block; position: absolute; top: 18px; width: 46%; }
+.no-scroll { overflow: hidden; }
 
 .no-ml { margin-left: 0; }
 .no-mr { margin-right: 0; }
@@ -31,7 +32,7 @@
  .title-section { 
    text-align: center; font-size: 26px; text-transform: uppercase; line-height: 1; margin-bottom: 50px;
    span { font-weight: 600; }
-   &.has-subtitle { margin-bottom: 8px; }
+   /*&.has-subtitle { margin-bottom: 8px; }*/
    }
 
    .transparent-buton { 
