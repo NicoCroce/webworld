@@ -5,15 +5,15 @@ footer {
 
         section { 
             @include col(1/4, $cycle: 4, $gutter: 5 ); 
-            h1 { font-size: 22px; color: #ffffff; font-weight: 600; margin-bottom: 30px; }
-            p { color: #c3c3c3; font-size: 14px; }
+            h1 { font-size: toem(20px); color: #ffffff; font-weight: 600; margin-bottom: 30px; }
+            p { color: #c3c3c3; font-size: toem(13.5px); }
             &.web {
-                h1 { font-size: 22px; font-family: 'Pacifico'; text-transform: capitalize; font-weight: 100; }
+                h1 { font-size: toem(22px); font-family: 'Pacifico'; text-transform: capitalize; font-weight: 100; }
             }
             &.contact { 
                 .list-links li { 
                     margin-top: 20px;
-                    i { color: $main-bg-color; font-size: 20px; width: 20px; display: inline-block; text-align: center; }
+                    i { color: $main-bg-color; font-size: toem(20px); width: 20px; display: inline-block; text-align: center; }
                     span { padding-left: 10px; color: white; }
                 }
             }
@@ -21,7 +21,7 @@ footer {
                 .list-tweets {
                     display: table; margin-bottom: 35px;
                     i, p { display: table-cell; vertical-align: top; }
-                    i { font-size: 20px; color: $main-bg-color; }
+                    i { font-size: toem(20px); color: $main-bg-color; }
                     p { padding-left: 15px; }
                     span { display: block; margin-top: 10px; color: $main-bg-color; } 
                 }
@@ -43,12 +43,12 @@ footer {
         background: #172227; padding: 30px 0; 
         .wrapper {
             overflow: auto;
-            span { color: #c4c4c4; font-size: 13px; line-height: 2.5; }
+            span { color: #c4c4c4; font-size: toem(13px); line-height: 2.5; }
             ul { 
                 float: right; 
                 li { 
                     @include transition();
-                    display: inline-block; margin-left: 10px; background: #2c3b42; color: white; font-size: 17px; text-align: center;
+                    display: inline-block; margin-left: 10px; background: #2c3b42; color: white; font-size: toem(17px); text-align: center;
                     border-radius: 50px;
                     a { width: 32px; height: 32px; display: inline-block; line-height: 2; }
                     &:hover { 

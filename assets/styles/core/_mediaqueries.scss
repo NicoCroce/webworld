@@ -13,7 +13,7 @@ $isPhone: 640px;
   	header {
 		.bg-header { width: 100%; background-size: contain; }
 		i { 
-			left: 25px; font-size: 25px;
+			left: 25px; font-size: toem(25px);
 			&:last-of-type { right: 25px; }
 		}
 	}
@@ -65,8 +65,8 @@ $isPhone: 640px;
 					height: auto;
 					.vertical-center-content {
 						position: initial; top: 0; transform: none;
-						h1 { font-size: 27px; margin-bottom: 10px; font-weight: 100; }
-						h2 { font-size: 16px; }
+						h1 { font-size: toem(27px); margin-bottom: 10px; font-weight: 100; }
+						h2 { font-size: toem(16px); }
 					}
 					button { position: initial; left: initial; right: initial; transform: none; margin-top: 35px; }
 				}

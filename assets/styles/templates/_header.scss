@@ -2,9 +2,13 @@
 nav {
     text-align: right; color: white;  z-index: 100; position: fixed; left: 0; right: 0;
     .content-header { border-bottom: 1px solid #7c7c7c; }
-    .logo { float: left; font-family: 'Pacifico'; font-size: toem(30px); line-height: 3.2;}
+    .logo { 
+        float: left; font-family: 'Pacifico'; font-size: toem(30px); line-height: 2.9;
+        &:hover { color: #71b6d5; }
+    }
     &.nav-stacked { background: rgba(0,0,0,.5); }
     ul, li { display: inline-block; }
+    li:hover { color: #71b6d5; }
     .menu-desktop a { margin: 0 toem(20px); line-height: 6; font-size: toem(14.5px); }
 
     .menu-mobile {

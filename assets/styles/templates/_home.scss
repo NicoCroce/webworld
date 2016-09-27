@@ -3,7 +3,7 @@ main {
     &.main-section { background: white; }
     .first-par { 
         padding-top: 90px; padding-bottom: 65px; text-align: center; line-height: 1.5;
-        font-size: 18px;
+        font-size: toem(18px);
     }
  }
 
@@ -43,15 +43,15 @@ main {
                     left: 0; right: 0; margin: 0 auto; z-index: 10; margin-top: 1px;
                     @include transition();
                         [class*="icon"] { 
-                            text-align: center; line-height: 2.5; color: white; font-size: 20px; position: relative;
+                            text-align: center; line-height: 2.5; color: white; font-size: toem(20px); position: relative;
                             right: 1px; top: 1px;
                             @include transition();
-                            &.change-ico { right: 0px; font-size: 22px; line-height: 2.4;}
+                            &.change-ico { right: 0px; font-size: toem(22px); line-height: 2.4;}
                         }
                     }
 
-        h3 { text-transform: capitalize; margin-top: 30px; margin-bottom: 15px; padding: 0 15px; }
-        p { margin-bottom: 30px; padding: 0 15px; }
+        h3 { text-transform: capitalize; margin-top: 30px; margin-bottom: 15px; padding: 0 15px; font-size: toem(20px); font-weight: 700; }
+        p { margin-bottom: 30px; padding: 0 15px; font-size: toem(13.5px); }
     }
 }
 
@@ -61,8 +61,8 @@ main {
     .img-cameras { background: url("../img/cameras.png") no-repeat; width: 315px; height: 189px; display: table-cell; }
     .block-info-section { 
         display: table-cell; padding-left: 38px;
-        .title-block-devices { margin: 20px 0; font-size: 20px; }
-        .par-block-devices { margin-bottom: 25px; font-size: 14px; line-height: 20px; }
+        .title-block-devices { margin: 20px 0; font-size: toem(20px); font-weight:  600; }
+        .par-block-devices { margin-bottom: 25px; font-size: toem(13.5px); line-height: 20px; }
         &.right-img { padding: 0; padding-right: 38px;  }
      }
 }
@@ -78,11 +78,11 @@ main {
 
 .last-project-section {
     text-align: center; overflow: hidden; cursor: pointer;
-    .sub-title-section { margin-bottom: 40px; }
+    .sub-title-section { margin-bottom: 5px; }
     .container-last-project {
         @include col(1/4);
-            h1 { font-size: 18px; font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
-            h2 { font-size: 14px; }
+            h1 { font-size: toem(18px); font-weight: 600; margin-top: 20px; text-transform: capitalize;  }
+            h2 { font-size: toem(13.5px); }
             &:hover {
                 [class*='last-project-']:before { transform: scale3d(1.1, 1.1, 1.1); box-shadow: 0 0 0 20px #484848 inset;  }
             }
@@ -107,12 +107,12 @@ main {
 .testimonials-slider {
     margin-bottom: 65px;
     .testimonials-subpar { 
-        text-align: center; line-height: 1.5; font-size: 18px; padding-top: 50px; margin-bottom: 50px;
+        text-align: center; line-height: 1.5; font-size: toem(18px); padding-top: 50px; margin-bottom: 50px;
         &:after { content: ''; border-bottom: 1px solid #e1e1e1; width: 20%; margin: 30px auto; display: block; }   
     }
 
     .testimonials-data { 
-        text-align: center; font-weight: 600;
+        text-align: center; font-weight: 600; font-size: toem(15px);
         #testimonialCompany { font-weight: 200; }
     }
 
