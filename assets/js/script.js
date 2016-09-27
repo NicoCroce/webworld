@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
-        if (scroll > 460){
+        if (scroll > 460) {
             $('#navigation-bar').addClass('nav-stacked');
         } else {
             $('#navigation-bar').removeClass('nav-stacked');
