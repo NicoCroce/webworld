@@ -12,23 +12,6 @@ $isPhone: 640px;
 	/*para cuando supera al ancho*/
   	header {
 		.bg-header { width: 100%; background-size: contain; }
-		/*.header-slide {
-		height: 237px; top: 0;
-		.change-info-slide {
-			width: 85%; margin: 0 auto;
-			.mask-container { 
-				@include vertical-align();
-				height: auto;
-				.vertical-center-content {
-					position: initial; top: 0; transform: none;
-					h1 { font-size: 27px; margin-bottom: 10px; font-weight: 100; }
-					h2 { font-size: 16px; }
-				}
-				button { position: initial; left: initial; right: initial; transform: none; margin-top: 35px; }
-			}
-		}*/
-			
-		/*.points-slide { display: none; }*/
 		i { 
 			left: 25px; font-size: 25px;
 			&:last-of-type { right: 25px; }
@@ -40,7 +23,6 @@ $isPhone: 640px;
 	header .header-slide { width: 82%; }
   	.wrapper, wrapper { padding: 0 25px; }
   	.last-project-section {
-		/* @include center(80%);*/
       .container-last-project {
         @include span(1/2);
         &:nth-child(4) .content-block-slide { margin-bottom: 0; }
@@ -129,7 +111,7 @@ $isPhone: 640px;
 		}
 	}
 	.last-project-section {
-		overflow: hidden; max-height: 0; transition: all .3s ease-out; opacity: 0;
+		overflow: hidden; max-height: 0; transition: max-height .4s ease, opacity .6s ease-in-out; opacity: 0;
 		&.is-visible { max-height: 1600px; opacity: 1; }
 		.container-last-project {
 			@include span(1/1);

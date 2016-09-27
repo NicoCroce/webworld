@@ -2,10 +2,10 @@
 nav {
     text-align: right; color: white;  z-index: 100; position: fixed; left: 0; right: 0;
     .content-header { border-bottom: 1px solid #7c7c7c; }
-    .logo { float: left; font-family: 'Pacifico'; font-size: 30px; line-height: 3.2;}
+    .logo { float: left; font-family: 'Pacifico'; font-size: toem(30px); line-height: 3.2;}
     &.nav-stacked { background: rgba(0,0,0,.5); }
     ul, li { display: inline-block; }
-    .menu-desktop a { margin: 0 20px; line-height: 6; }
+    .menu-desktop a { margin: 0 toem(20px); line-height: 6; font-size: toem(14.5px); }
 
     .menu-mobile {
         height: 200%; position: fixed; z-index: 10; width: 70%; background: rgba(24,24,26,0.90);
@@ -75,10 +75,10 @@ header {
         margin: 0 auto; width: 1500px;
     }
      .header-slide {
-            position: relative; height: 365px; top: 97px;
+            position: relative; height: toem(365px); top: toem(97px);
         i {    
             transform: scale3d(1 ,1 ,1); @include transition(); cursor: pointer;
-            color: white; font-size: 40px; position: absolute; left: -50px; top: 45%;
+            color: white; font-size: toem(40px); position: absolute; left: -50px; top: 45%;
 
             &:last-of-type { right: -50px; left: inherit; }
             &:hover { transform: scale3d(1.1 ,1.1 ,1.1); color: #71b6d5; }
@@ -89,19 +89,19 @@ header {
             .mask-container { height: 100%; }
             .vertical-center-content { 
                 @include vertical-align();
-                h1 { font-size: 40px; font-weight: bold; color: white; text-transform: inherit; text-align: center; }
-                h2 { font-size: 27px; font-weight: 100; color: white; text-transform: inherit; text-align: center; line-height: 1; }
+                h1 { font-size: toem(40px); font-weight: bold; color: white; text-transform: inherit; text-align: center; }
+                h2 { font-size: toem(25px); font-weight: 100; color: white; text-transform: inherit; text-align: center; line-height: 1; }
             }
             .button-show-more { 
                 @include h-al-center(); bottom: 0;
                 @include transition();
-                padding: 15px 20px; font-size: 17px; text-transform: uppercase; color: white; background: #71b6d5;
+                padding: 15px 20px; font-size: toem(17px); text-transform: uppercase; color: white; background: #71b6d5;
                 border: none; border-radius: 5px; font-weight: 600; cursor: pointer; line-height: 1; 
                 &:hover { background: rgba(113, 182, 213, 0.61); box-shadow: 0 0 0 3px #71b6d5 inset; }
             }
         }
         .points-slide {
-            text-align: center; margin-top: 40px;
+            text-align: center; margin-top: toem(40px);
            li { 
                 width: 7px; height: 7px; background: white; border-radius: 10px; display: inline-block; margin-left: 30px; cursor: pointer;
                 &:first-of-type { margin: 0; }
