@@ -18,6 +18,11 @@ $(document).ready(function () {
         }
     });
 
+    $('.nav-bar-menu li a').click(function(){
+        $('.nav-bar-menu li a').removeClass('active');
+        $(this).addClass('active');
+    })
+
     $(document).on("click", '#ourFeatures ', function() {
         $('#ourFeaturesContent').toggleClass('is-visible');
     });

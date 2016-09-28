@@ -49,18 +49,18 @@ nav {
                 &:before {
                     transition: all .3s ease-in;
                     content:""; display:block; position:absolute; left:50%; bottom:0; 
-                    height:2px; width:0; background: $main-bg-color;
+                    height:1px; width:0; background: $main-bg-color;
                 }
 
                 &:hover {
-                    color: $main-bg-color; box-shadow: 0px -10px 7px -7px $main-bg-color  inset;
+                    color: $main-bg-color; box-shadow: 0px -9px 7px -7px $main-bg-color  inset;
                     &:before {
                         width:100%; left:0; color: $main-bg-color
                     }
                 }
 
                 &.active {
-                    color: $main-bg-color; font-weight: 600; box-shadow: 0px -10px 7px -7px $main-bg-color inset;
+                    color: $main-bg-color; font-weight: 600; box-shadow: 0px -9px 7px -7px $main-bg-color inset;
                     &:before {
                         width:100%; left:0; color: $main-bg-color
                     }
