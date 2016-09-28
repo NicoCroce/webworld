@@ -141,7 +141,7 @@ function sassFunction() {
 };
 
 function copyBower() {
-	var jeet = gulp.src(BOWER_COMPONENTS + '/jeet.gs/scss/jeet/**/*')
+	var jeet = gulp.src(BOWER_COMPONENTS + '/jeet/scss/jeet/**/*')
 		.pipe(gulp.dest(SRC_SASS_BASE + '/libs/jeet'));
 	var jqueryFiles = gulp.src(BOWER_COMPONENTS + '/jquery/dist/jquery.min.js')
 		.pipe(gulp.dest(SRC_JAVASCRIPT_BASE + '/bundles/min/'));
