@@ -24,7 +24,9 @@ Dentro de un directorio limpio ejecutar
 ```sh
 $ git clone https://github.com/NicoCroce/webworld.git
 ```
-
+```sh
+$ cd webworld
+```
 Para instalar todas las dependencias ejecutar
 ```sh
 $ npm run first-run
