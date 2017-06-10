@@ -33,7 +33,7 @@ $isPhone: 640px;
       }
   	}
   	footer .grid-nav section {
-      @include col(1/2, $cycle: 2, $gutter: 5 );
+      @include column(1/2, $cycle: 2, $gutter: 5 );
       padding-bottom: 40px;
       &:nth-child(3), &:nth-child(4) { padding-bottom: 0; }
   	}

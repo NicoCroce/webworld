@@ -124,7 +124,7 @@ function cleanJs(done) {
 function connectServer(done) {
 	connect.server({
 		root: FOLDER_DEV,
-		port: 2173
+		port: 2175
 	});
 	return done();
 };
@@ -141,7 +141,7 @@ function sassFunction() {
 };
 
 function copyBower() {
-	var jeet = gulp.src(BOWER_COMPONENTS + '/jeet/scss/jeet/**/*')
+	var jeet = gulp.src('node_modules/jeet/scss/**/*')
 		.pipe(gulp.dest(SRC_SASS_BASE + '/libs/jeet'));
 	var jqueryFiles = gulp.src(BOWER_COMPONENTS + '/jquery/dist/jquery.min.js')
 		.pipe(gulp.dest(SRC_JAVASCRIPT_BASE + '/bundles/min/'));
